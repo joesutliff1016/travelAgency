@@ -1,8 +1,18 @@
+@font-face {
+  font-family: MerriweatherBold;
+  src: url(../fonts/Merriweather-Bold.ttf);
+}
+@font-face {
+  font-family: MerriweatherLight;
+  src: url(../fonts/Merriweather-Light.ttf);
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Noto Serif', serif;
   background: #242b45;
+  font-family: MerriweatherLight;
+
 }
 .one {
   background-image: url("../images/background.jpg");
@@ -10,6 +20,23 @@ body {
   background-position: center;
   background-size: cover;
   height: 100vh;
+}
+#desktop {
+  position: absolute;
+  top: 15px;
+  right: 100px;
+  display: none;
+}
+#desktop ul {
+  display: inline-block;
+  list-style-type: none;
+}
+#desktop ul li {
+  float: left;
+  margin-left: 50px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
 }
 #intro {
   width: 90%;
@@ -24,6 +51,7 @@ h1 {
   font-size: 3rem;
   color: #fff;
   letter-spacing: 3px;
+  font-family: MerriweatherBold;
 }
 .one p {
   color: #fff;
@@ -39,6 +67,7 @@ h2 {
   margin: 0;
   font-size: 2.5rem;
   letter-spacing: 3px;
+  font-family: MerriweatherBold;
 }
 #two_grid {
   width: 90%;
@@ -50,6 +79,7 @@ h2 {
 .two p {
   font-size: .95rem;
   line-height: 1.5rem;
+  font-family: MerriweatherLight;
 }
 #two_row1 {
   grid-column: 1/7;
@@ -89,6 +119,7 @@ h3 {
   font-size: 2.5rem;
   letter-spacing: 3px;
   text-align: center;
+  font-family: MerriweatherBold;
 }
 .three p {
   font-size: .95rem;
@@ -205,6 +236,9 @@ h4, h5, h6 {
   }
 }
 @media screen and (min-width: 1280px){
+  #desktop {
+    display: unset;
+  }
   #intro {
     top: 40%;
   }
